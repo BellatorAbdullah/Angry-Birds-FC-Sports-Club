@@ -1,0 +1,300 @@
+/* reset - clear browser default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif; /* clean readable font */
+  background: #F4F7FB; /* light bluish white bg */
+  color: #0F1F36; /* dark navy text */
+}
+
+a { text-decoration: none; } /* remove underlines from links */
+ul { list-style: none; } /* remove bullet points */
+
+
+/* ---- NAVBAR ---- */
+
+.navbar {
+  background: #0C3B6E; /* dark blue navbar */
+  height: 64px;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center; /* center items vertically */
+  justify-content: space-between; /* push brand left, links center, actions right */
+  position: sticky; /* stays at top when scrolling */
+  top: 0;
+  z-index: 100; /* sit above everything else */
+}
+
+/* thin coloured line below the navbar */
+.accent-bar {
+  height: 3px;
+  background: linear-gradient(90deg, #0C3B6E, #2E7D32, #ffffff);
+}
+
+/* club name on the left */
+.brand {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.brand span {
+  color: #81C784; /* green highlight on "Birds" */
+}
+
+/* the nav links in the middle */
+.nav-links {
+  display: flex;
+  gap: 4px;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: background 0.15s; /* smooth hover effect */
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.12); /* subtle white glow on hover */
+  color: #ffffff;
+}
+
+.nav-links a.active {
+  background: rgba(76, 175, 80, 0.25); /* green tint for current page */
+  color: #81C784;
+}
+
+/* search and profile buttons on the right */
+.icon-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.icon-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* join club button */
+.join-btn {
+  background: #2E7D32; /* green button */
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.15s;
+}
+
+.join-btn:hover {
+  background: #388E3C; /* slightly lighter green on hover */
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* spacing between icon buttons and join btn */
+}
+
+
+/* ---- HERO SECTION ---- */
+
+.hero {
+  background: linear-gradient(135deg, #082A52, #0C3B6E, #1B5E20); /* dark blue to dark green gradient */
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 2rem;
+  gap: 1rem; /* space between heading, text, button */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.hero p {
+  color: rgba(255, 255, 255, 0.7); /* slightly faded white */
+  font-size: 1rem;
+}
+
+
+/* ---- FOOTER ---- */
+
+.footer {
+  background: #082A52; /* darker navy than navbar */
+  padding: 1.5rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5); /* faded white text */
+  font-size: 13px;
+}
+
+
+/* ---- MOBILE ---- */
+
+/* hide nav links on small screens */
+@media (max-width: 768px) {
+  .nav-links,
+  .nav-actions {
+    display: none;
+  }
+}
+
+/* shared buttons */
+.join-btn {
+  background: #2E7D32;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.join-btn:hover { background: #388E3C; }
+
+.outline-btn {
+  border: 2px solid #2E7D32;
+  color: #2E7D32;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.outline-btn:hover { background: #2E7D32; color: white; }
+
+/* title + see all link row */
+.section-header { display: flex; justify-content: space-between; margin-bottom: 1.5rem; }
+.section-header h2 { color: #0C3B6E; }
+.see-all { color: #2E7D32; text-decoration: none; font-size: 13px; }
+
+/* small label above a heading */
+.eyebrow { color: #81C784; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; }
+
+
+/* --- SECTION 1 HERO --- */
+#section1 {
+  /* swap gradient with your image: url('../images/banner.jpg') center/cover */
+  background: linear-gradient(135deg, #082A52, #0C3B6E, #1B5E20);
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.hero-tag {
+  background: #1B5E20;
+  color: #81C784;
+  font-size: 12px;
+  padding: 4px 14px;
+  border-radius: 20px;
+}
+
+#section1 h1 { font-size: 2.5rem; font-weight: 800; color: white; }
+#section1 p { color: #ccc; }
+
+
+/* --- SECTION 2 NEWS --- */
+#section2 { padding: 3rem 2rem; max-width: 1080px; margin: 0 auto; }
+
+.news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
+.news-card { background: white; border-radius: 10px; border: 1px solid #ddd; padding-bottom: 1rem; }
+.news-card:hover { box-shadow: 0 4px 12px #ccc; }
+
+/* delete this once you add a real image */
+.card-img { background: #e8eef5; height: 140px; display: flex; align-items: center; justify-content: center; color: #999; margin-bottom: 1rem; }
+
+.news-card .tag { display: inline-block; background: #e8f5e9; color: #2E7D32; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin: 0 1rem 0.5rem; }
+.news-card h3 { font-size: 14px; font-weight: 700; color: #0C3B6E; padding: 0 1rem 0.4rem; }
+.news-card p { font-size: 13px; color: #666; padding: 0 1rem 0.5rem; }
+.news-card small { font-size: 12px; color: #aaa; padding: 0 1rem; }
+
+
+/* --- SECTION 3 NEXT MATCH --- */
+#section3 { background: #0C3B6E; padding: 3rem 2rem; text-align: center; }
+
+.match-row { display: flex; align-items: center; justify-content: center; gap: 2rem; }
+
+.match-team { display: flex; flex-direction: column; align-items: center; gap: 8px; color: white; font-weight: 600; }
+
+.badge { width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; }
+.badge.home { background: #2E7D32; }
+.badge.away { background: #1a3a5c; }
+
+.vs { font-size: 2rem; font-weight: 800; color: white; }
+.match-vs { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.match-vs small { color: #aac4e0; font-size: 12px; }
+
+
+/* --- SECTION 4 LEAGUE TABLE --- */
+#section4 { padding: 3rem 2rem; max-width: 1080px; margin: 0 auto; }
+
+.league-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.league-table th { background: #0C3B6E; color: white; padding: 10px 14px; text-align: left; }
+.league-table td { padding: 10px 14px; border-bottom: 1px solid #eee; }
+.league-table tbody tr:nth-child(even) { background: #f5f8fc; }
+.league-table tr.highlight { background: #e8f5e9; font-weight: 700; color: #1B5E20; } /* your club */
+.league-table tbody tr:hover { background: #e0ecf8; }
+
+
+/* --- SECTION 5 PLAYERS --- */
+#section5 { padding: 3rem 2rem; max-width: 1080px; margin: 0 auto; }
+
+.players-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
+.player-card { background: white; border-radius: 10px; padding: 1.5rem; text-align: center; border: 1px solid #ddd; }
+.player-card:hover { box-shadow: 0 4px 12px #ccc; }
+
+/* delete once you have a real photo */
+.player-img { background: #e8eef5; height: 120px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #999; margin-bottom: 1rem; }
+
+.player-card h3 { font-size: 15px; font-weight: 700; color: #0C3B6E; }
+.position { font-size: 12px; color: #2E7D32; font-weight: 600; text-transform: uppercase; }
+.player-stats { display: flex; justify-content: center; gap: 1.5rem; margin-top: 1rem; }
+.player-stats div { display: flex; flex-direction: column; align-items: center; }
+.player-stats strong { font-size: 1.3rem; color: #0C3B6E; }
+.player-stats small { font-size: 11px; color: #888; }
+
+
+/* --- SECTION 6 SHOP --- */
+#section6 { background: #2E7D32; padding: 4rem 2rem; text-align: center; }
+#section6 h2 { font-size: 2rem; font-weight: 800; color: white; margin-bottom: 0.8rem; }
+#section6 p { color: #c8e6c9; margin-bottom: 1.8rem; }
+.cta-btns { display: flex; justify-content: center; gap: 12px; }
+#section6 .join-btn { background: white; color: #2E7D32; }
+#section6 .outline-btn { border-color: white; color: white; }
+#section6 .outline-btn:hover { background: white; color: #2E7D32; }
+
+
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+  .news-grid, .players-grid { grid-template-columns: 1fr; }
+  .match-row { gap: 1rem; }
+}
