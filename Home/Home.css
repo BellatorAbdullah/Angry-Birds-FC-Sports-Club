@@ -298,3 +298,75 @@ ul { list-style: none; } /* remove bullet points */
   .news-grid, .players-grid { grid-template-columns: 1fr; }
   .match-row { gap: 1rem; }
 }
+
+/* --- CATALOG SECTION --- */
+
+#catalog {
+  padding: 3rem 2rem;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* hides anything outside this box so cards slide in and out cleanly */
+.catalog-track-wrapper {
+  overflow: hidden;
+}
+
+/* this is the long strip of all the cards sitting in a row */
+.catalog-track {
+  display: flex;
+  gap: 16px;
+  /* infinite scroll animation - moves left over 30 seconds then repeats */
+  animation: slideLeft 30s linear infinite;
+}
+
+/* pauses the scroll when you hover over it */
+.catalog-track:hover {
+  animation-play-state: paused;
+}
+
+/* the actual sliding animation - moves left by exactly half (the duplicate set) */
+@keyframes slideLeft {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.catalog-card {
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+  min-width: 180px; /* fixed width so cards don't shrink */
+  flex-shrink: 0;   /* stops cards from squishing */
+}
+
+.catalog-card:hover {
+  box-shadow: 0 4px 12px #ccc;
+}
+
+/* placeholder box - swap with <img src="jersey.jpg"> when you have photos */
+.catalog-img {
+  background: #e8eef5;
+  height: 200px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 13px;
+  margin-bottom: 0.8rem;
+}
+
+.item-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0C3B6E;
+  margin-bottom: 4px;
+}
+
+.item-price {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2E7D32; /* green price */
+}
