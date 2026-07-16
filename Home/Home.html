@@ -8,6 +8,7 @@
 </head>
 <body>
 
+  <!-- navbar - kept it simple, no dropdown menus needed for now -->
   <nav class="navbar">
     <a href="Home.html" class="brand">⚽ Angry<span>Birds</span> FC</a>
     <ul class="nav-links">
@@ -18,6 +19,7 @@
       <li><a href="../Contact/Contact.html">Contact</a></li>
     </ul>
     <div class="nav-actions">
+      <!-- search + profile icons are just placeholders atm, not wired up to anything yet -->
       <button type="button" class="icon-btn">🔍</button>
       <button type="button" class="icon-btn">👤</button>
       <a href="#" class="join-btn">Join Club</a>
@@ -25,6 +27,7 @@
   </nav>
   <div class="accent-bar"></div>
 
+  <!-- hero banner -->
   <section id="section1">
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -35,6 +38,7 @@
     </div>
   </section>
 
+  <!-- news section, currently 3 hardcoded cards, will probably pull from a CMS later -->
    <section id="section2">
     <div class="section-header">
       <h2>Latest News</h2>
@@ -42,21 +46,21 @@
     </div>
     <div class="news-grid">
       <div class="news-card">
-        <div class="card-img">Add image here</div>
+        <div class="card-img">Image</div>
         <span class="tag">Match Report</span>
         <h3>AngryBirds beat Rivals FC 3–1 in stunning comeback</h3>
         <p>A brace from Jay Rahman sealed the win at BirdNest Arena.</p>
         <small>12 Jun 2025</small>
       </div>
       <div class="news-card">
-        <div class="card-img">Add image here</div>
+        <div class="card-img">Image</div>
         <span class="tag">Transfer</span>
         <h3>Club signs midfielder Amir Yusoff on 2-year deal</h3>
         <p>The 23-year-old joins from FC Eagles ahead of the new season.</p>
         <small>9 Jun 2025</small>
       </div>
       <div class="news-card">
-        <div class="card-img">Add image here</div>
+        <div class="card-img">Image</div>
         <span class="tag">Training</span>
         <h3>Pre-season camp kicks off at Highland FC Academy</h3>
         <p>Squad assembles for two-week intensive before league opener.</p>
@@ -65,6 +69,7 @@
     </div>
   </section>
 
+  <!-- next match strip - update this manually each week for now -->
   <section id="section3">
     <p class="eyebrow">Next Match</p>
     <div class="match-row">
@@ -85,6 +90,7 @@
     <a href="../Schedule/Schedule.html" class="join-btn full-schedule-btn">Full Schedule</a>
   </section>
 
+  <!-- league table, only showing top 4 for now so it doesn't get too long on mobile -->
   <section id="section4">
     <div class="section-header">
       <h2>League Table</h2>
@@ -96,7 +102,7 @@
       </thead>
       <tbody>
         <tr><td>1</td><td>Rival FC</td><td>25</td><td>19</td><td>3</td><td>3</td><td>60</td></tr>
-        <!-- Add class="highlight" to your club row so it stands out -->
+        <!-- our row, keep the highlight class here so it stands out on the table -->
         <tr class="highlight"><td>2</td><td>AngryBirds FC</td><td>25</td><td>18</td><td>4</td><td>3</td><td>58</td></tr>
         <tr><td>3</td><td>FC Eagles</td><td>25</td><td>15</td><td>5</td><td>5</td><td>50</td></tr>
         <tr><td>4</td><td>Storm United</td><td>25</td><td>12</td><td>6</td><td>7</td><td>42</td></tr>
@@ -104,8 +110,7 @@
     </table>
   </section>
 
-  <!-- SECTION 5 : TOP PLAYERS -->
-  <!-- Tip: replace .player-img div with <img src="player.jpg"> -->
+  <!-- top players - swap the .player-img divs for real <img> tags once we get proper photos from the club -->
   <section id="section5">
     <div class="section-header">
       <h2>Top Players</h2>
@@ -141,8 +146,7 @@
     </div>
   </section>
 
-  <!-- SECTION 6 : SHOP / JOIN -->
-  <!-- Tip: link the buttons to your actual shop or membership page -->
+  <!-- membership/shop CTA - links go nowhere yet, waiting on the shop page to be finished -->
   <section id="section6">
     <h2>Support the Club</h2>
     <p>Get your official AngryBirds FC kit or become a member today.</p>
@@ -152,8 +156,8 @@
     </div>
   </section>
 
-  <!-- CATALOG SECTION -->
-  <!-- horizontal scrolling jersey catalog, it auto scrolls on its own -->
+  <!-- merch catalog, scrolls on its own via CSS animation -->
+  <!-- had to duplicate every card below so the loop doesn't have a visible jump when it resets -->
   <section id="catalog">
 
     <div class="section-header">
@@ -161,75 +165,11 @@
       <a href="#" class="see-all">View all →</a>
     </div>
 
-    <!-- this is the outer box that hides the overflow -->
     <div class="catalog-track-wrapper">
 
-      <!-- this inner strip moves left automatically via CSS animation -->
-      <!-- we duplicate all the cards so when it reaches the end it loops seamlessly -->
       <div class="catalog-track">
 
-        <!-- JERSEY set -->
-        <div class="catalog-card">
-          <div class="catalog-img">Jersey photo</div>
-          <p class="item-name">Home Kit 2025</p>
-          <p class="item-price">RM 89.00</p>
-        </div>
-
-        <div class="catalog-card">
-          <div class="catalog-img">Jersey photo</div>
-          <p class="item-name">Away Kit 2025</p>
-          <p class="item-price">RM 89.00</p>
-        </div>
-
-        <div class="catalog-card">
-          <div class="catalog-img">Jersey photo</div>
-          <p class="item-name">Third Kit 2025</p>
-          <p class="item-price">RM 89.00</p>
-        </div>
-
-        <div class="catalog-card">
-          <div class="catalog-img">Jersey photo</div>
-          <p class="item-name">Goalkeeper Kit</p>
-          <p class="item-price">RM 95.00</p>
-        </div>
-
-        <div class="catalog-card">
-          <div class="catalog-img">Jersey photo</div>
-          <p class="item-name">Training Jersey</p>
-          <p class="item-price">RM 65.00</p>
-        </div>
-
-        <div class="catalog-card">
-          <div class="catalog-img">Jersey photo</div>
-          <p class="item-name">Retro Kit 2019</p>
-          <p class="item-price">RM 120.00</p>
-        </div>
-
-        <div class="catalog-card">
-          <div class="catalog-img">Jersey photo</div>
-          <p class="item-name">Limited Edition</p>
-          <p class="item-price">RM 150.00</p>
-        </div>
-
-        <div class="catalog-card">
-          <div class="catalog-img">Jersey photo</div>
-          <p class="item-name">Kids Home Kit</p>
-          <p class="item-price">RM 55.00</p>
-        </div>
-
-        <div class="catalog-card">
-          <div class="catalog-img">Jersey photo</div>
-          <p class="item-name">Kids Away Kit</p>
-          <p class="item-price">RM 55.00</p>
-        </div>
-
-        <div class="catalog-card">
-          <div class="catalog-img">Jersey photo</div>
-          <p class="item-name">Womens Kit</p>
-          <p class="item-price">RM 79.00</p>
-        </div>
-
-        <!-- duplicate set so the loop looks seamless -->
+        <!-- jerseys -->
         <div class="catalog-card">
           <div class="catalog-img">Jersey photo</div>
           <p class="item-name">Home Kit 2025</p>
@@ -298,6 +238,13 @@
   <footer class="footer">
     <p>© 2025 AngryBirds FC. All rights reserved.</p>
   </footer>
+
+  <script>
+    // clone the catalog cards once so the scroll loop still has a duplicate set to run through,
+    // without me having to hand-copy every card in the HTML
+    const track = document.querySelector('.catalog-track');
+    track.innerHTML += track.innerHTML;
+  </script>
 
 </body>
 </html>
