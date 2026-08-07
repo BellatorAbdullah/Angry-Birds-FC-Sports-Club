@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AngryBirds FC</title>
+  <link rel="stylesheet" href="Home.css">
+</head>
+<body>
+
+  <!-- navbar - kept it simple, no dropdown menus needed for now -->
+  <nav class="navbar">
+    <a href="Home.html" class="brand">
+      <img src="../logo.png" alt="AngryBirds FC logo" class="logo-img">
+      Angry<span>Birds</span> FC</a>
+    <ul class="nav-links">
+      <li><a href="../Home/Home.html" class="active">Home</a></li>
+      <li><a href="../About/About.html">About</a></li>
+      <li><a href="../Schedule/Schedule.html">Schedule</a></li>
+      <li><a href="../Stats/Stats.html">Stats</a></li>
+      <li><a href="../Merch/Merch.html">Merch</a></li>
+      <li><a href="../News/News.html">News</a></li>
+      <li><a href="../Rules/Rules.html">Rules</a></li>
+      <li><a href="../Contact/Contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button type="button" class="icon-btn">
+        <img src="../search.png" alt="Profile">
+      </button>
+      <button type="button" class="icon-btn">
+        <img src="../user.png" alt="Profile">
+      </button>
+      <a href="../Profile/sign.html" class="join-btn">Join Club</a>
+    </div>
+  </nav>
+  <div class="accent-bar"></div>
+
+  <!-- hero banner -->
+  <section id="section1">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-tag">Season 2024 / 25</span>
+      <h1>Play Bold.<br>Win Together.</h1>
+      <p>AngryBirds FC — where passion meets the pitch.</p>
+      <a href="../Schedule/Schedule.html" class="join-btn">View Schedule</a>
+    </div>
+  </section>
+
+  <!-- news section, currently 3 hardcoded cards, will probably pull from a CMS later -->
+   <section id="section2">
+    <div class="section-header">
+      <h2>Latest News</h2>
+      <a href="#" class="see-all">See all →</a>
+    </div>
+    <div class="news-grid">
+      <div class="news-card">
+        <div class="card-img">Image</div>
+        <span class="tag">Match Report</span>
+        <h3>AngryBirds beat Rivals FC 3–1 in stunning comeback</h3>
+        <p>A brace from Jay Rahman sealed the win at BirdNest Arena.</p>
+        <small>12 Jun 2025</small>
+      </div>
+      <div class="news-card">
+        <div class="card-img">Image</div>
+        <span class="tag">Transfer</span>
+        <h3>Club signs midfielder Amir Yusoff on 2-year deal</h3>
+        <p>The 23-year-old joins from FC Eagles ahead of the new season.</p>
+        <small>9 Jun 2025</small>
+      </div>
+      <div class="news-card">
+        <div class="card-img">Image</div>
+        <span class="tag">Training</span>
+        <h3>Pre-season camp kicks off at Highland FC Academy</h3>
+        <p>Squad assembles for two-week intensive before league opener.</p>
+        <small>5 Jun 2025</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- next match strip - update this manually each week for now -->
+  <section id="section3">
+    <p class="eyebrow">Next Match</p>
+    <div class="match-row">
+      <div class="match-team">
+        <div class="badge home">🐦</div>
+        <span>AngryBirds FC</span>
+      </div>
+      <div class="match-vs">
+        <span class="vs">VS</span>
+        <small>Sat 22 Jun · 3:00 PM</small>
+        <small>BirdNest Arena</small>
+      </div>
+      <div class="match-team">
+        <div class="badge away">🦅</div>
+        <span>FC Eagles</span>
+      </div>
+    </div>
+    <a href="../Schedule/Schedule.html" class="join-btn full-schedule-btn">Full Schedule</a>
+  </section>
+
+  <!-- league table, only showing top 4 for now so it doesn't get too long on mobile -->
+  <section id="section4">
+    <div class="section-header">
+      <h2>League Table</h2>
+      <a href="../Stats/Stats.html" class="see-all">Full table →</a>
+    </div>
+    <table class="league-table">
+      <thead>
+        <tr><th>#</th><th>Club</th><th>P</th><th>W</th><th>D</th><th>L</th><th>Pts</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Rival FC</td><td>25</td><td>19</td><td>3</td><td>3</td><td>60</td></tr>
+        <!-- our row, keep the highlight class here so it stands out on the table -->
+        <tr class="highlight"><td>2</td><td>AngryBirds FC</td><td>25</td><td>18</td><td>4</td><td>3</td><td>58</td></tr>
+        <tr><td>3</td><td>FC Eagles</td><td>25</td><td>15</td><td>5</td><td>5</td><td>50</td></tr>
+        <tr><td>4</td><td>Storm United</td><td>25</td><td>12</td><td>6</td><td>7</td><td>42</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- top players - swap the .player-img divs for real <img> tags once we get proper photos from the club -->
+  <section id="section5">
+    <div class="section-header">
+      <h2>Top Players</h2>
+    </div>
+    <div class="players-grid">
+      <div class="player-card">
+        <div class="player-img">
+          <img src="Omar .png" alt="Omar Osama">
+        </div>
+        <h3>Omar Osama</h3>
+        <span class="position">Striker</span>
+        <div class="player-stats">
+          <div><strong>18</strong><small>Goals</small></div>
+          <div><strong>7</strong><small>Assists</small></div>
+        </div>
+      </div>
+      <div class="player-card">
+        <div class="player-img">
+          <img src="../bag1.png" alt="Amir Yusoff">
+        </div>
+        <h3>Amir Yusoff</h3>
+        <span class="position">Midfielder</span>
+        <div class="player-stats">
+          <div><strong>6</strong><small>Goals</small></div>
+          <div><strong>14</strong><small>Assists</small></div>
+        </div>
+      </div>
+      <div class="player-card">
+        <div class="player-img">
+          <img src="Mohammad .png" alt="Mohammad">
+        </div>
+        <h3>Mohammad</h3>
+        <span class="position">Goalkeeper</span>
+        <div class="player-stats">
+          <div><strong>12</strong><small>Clean Sheets</small></div>
+          <div><strong>98%</strong><small>Save Rate</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- membership/shop CTA - links go nowhere yet, waiting on the shop page to be finished -->
+  <section id="section6">
+    <h2>Support the Club</h2>
+    <p>Get your official AngryBirds FC kit or become a member today.</p>
+    <div class="cta-btns">
+      <a href="../Merch/Merch.html" class="join-btn">Buy Kit 🛒</a>
+      <a href="../Profile/sign.html" class="outline-btn">Become a Member</a>
+    </div>
+  </section>
+
+  <!-- merch catalog, scrolls on its own via CSS animation -->
+  <!-- had to duplicate every card below so the loop doesn't have a visible jump when it resets -->
+  <section id="catalog">
+
+    <div class="section-header">
+      <h2>MERCH</h2>
+      <a href="../MerchMerch.html" class="see-all">View all →</a>
+    </div>
+
+    <div class="catalog-track-wrapper">
+
+      <div class="catalog-track">
+
+        <!--  The Merch starts over here -->
+        <div class="catalog-card">
+          <div class="catalog-img">
+            <img src="../Shirt1.png" alt="Angry Birds FC Home Kit">
+          </div>
+          <p class="item-name">	Angry Birds FC Home Kit – "Nest Guard"</p>
+          <p class="item-price">RM 45</p>
+        </div>
+
+        <div class="catalog-card">
+          <div class="catalog-img">
+            <img src="../Shirt2.png" alt="Angry Birds FC Away Kit">
+          </div>
+          <p class="item-name">	Angry Birds FC Away Kit – "Slingshot Strike"</p>
+          <p class="item-price">RM 45</p>
+        </div>
+
+        <div class="catalog-card">
+          <div class="catalog-img">
+            <img src="../Shirt3.png" alt="Angry Birds FC Third Kit">
+          </div>
+          <p class="item-name">	Angry Birds FC Streetwear Tee – "Flock Life"</p>
+          <p class="item-price">RM 29</p>
+        </div>
+
+        <div class="catalog-card">
+          <div class="catalog-img">
+            <img src="../bag1.png" alt="Angry Birds FC Goalkeeper Kit">
+          </div>
+          <p class="item-name">	Angry Birds FC Kit Bag – "Feather Carry"</p>
+          <p class="item-price">RM 39</p>
+        </div>
+
+        <div class="catalog-card">
+          <div class="catalog-img">
+            <img src="../bag2.png" alt="Angry Birds FC Training Jersey">
+          </div>
+          <p class="item-name">Angry Birds FC Backpack – "Wingpack"</p>
+          <p class="item-price">RM 35.00</p>
+        </div>
+
+        <div class="catalog-card">
+          <div class="catalog-img">
+            <img src="../bottle1.png" alt="Angry Birds FC Training Jersey">
+          </div>
+          <p class="item-name">Angry Birds FC Bottle – "Peck and Sip"</p>
+          <p class="item-price">RM 15.00</p>
+        </div>
+
+        <div class="catalog-card">
+          <div class="catalog-img">
+            <img src="../bottle2.png" alt="Angry Birds FC Training Jersey">
+          </div>
+          <p class="item-name">Angry Birds FC Bottle – "Beak Blast"</p>
+          <p class="item-price">RM 15</p>
+        </div>
+
+        <div class="catalog-card">
+          <div class="catalog-img">
+            <img src="../hat1.png" alt="Angry Birds FC Kids Home Kit">
+          </div>
+          <p class="item-name">Angry Birds FC Snapback – "Top Feather"</p>
+          <p class="item-price">RM 20.00</p>
+        </div>
+
+        <div class="catalog-card">
+          <div class="catalog-img">
+            <img src="../hat2.png" alt="Angry Birds FC Kids Away Kit">
+          </div>
+          <p class="item-name">Angry Birds FC Snapback – "Sunset Squad"</p>
+          <p class="item-price">RM 20.00</p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="footer">
+  <div class="footer-content">
+
+    <div class="footer-col footer-brand">
+      <a href="Home.html" class="brand">⚽ Angry<span>Birds</span> FC</a>
+      <p>Play Bold. Win Together.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="../Home/Home.html">Home</a></li>
+        <li><a href="../About/About.html">About</a></li>
+        <li><a href="../Schedule/Schedule.html">Schedule</a></li>
+        <li><a href="../Stats/Stats.html">Stats</a></li>
+        <li><a href="../Contact/Contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+
+      <h4>Follow Us</h4>
+        <div class="social-links">
+           <a href="#" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+              <img src="../instagram logo.svg" alt="Instagram">
+          </a>
+          <a href="#" target="_blank" rel="noopener" class="social-icon" aria-label="YouTube">
+              <img src="../I need this.svg" alt="YouTube">
+          </a>
+          <a href="#" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok">
+              <img src="../tiktok logo.svg" alt="TikTok">
+          </a>
+          <a href="#" target="_blank" rel="noopener" class="social-icon" aria-label="X">
+              <img src="../X logo.svg" alt="X">
+          </a>
+        </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 AngryBirds FC. All rights reserved.</p>
+  </div>
+</footer>
+
+  <script src="Home.js"></script>
+</body>
+</html>
